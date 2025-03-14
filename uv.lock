@@ -440,6 +440,7 @@ dependencies = [
     { name = "pytest" },
     { name = "pytest-selenium" },
     { name = "pytest-xdist" },
+    { name = "requests" },
     { name = "selenium" },
     { name = "webdriver-manager" },
 ]
@@ -449,6 +450,7 @@ requires-dist = [
     { name = "pytest", specifier = ">=8.3.5" },
     { name = "pytest-selenium", specifier = ">=4.1.0" },
     { name = "pytest-xdist", specifier = ">=3.6.1" },
+    { name = "requests", specifier = "<3.12" },
     { name = "selenium", specifier = ">=4.29.0" },
     { name = "webdriver-manager", specifier = ">=4.0.2" },
 ]

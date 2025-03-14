@@ -8,6 +8,7 @@ dependencies = [
     "pytest>=8.3.5",
     "pytest-selenium>=4.1.0",
     "pytest-xdist>=3.6.1",
+    "requests<3.12",
     "selenium>=4.29.0",
     "webdriver-manager>=4.0.2",
 ]
