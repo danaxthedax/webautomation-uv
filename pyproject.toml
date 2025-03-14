@@ -1,0 +1,13 @@
+[project]
+name = "webautomation-uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=8.3.5",
+    "pytest-selenium>=4.1.0",
+    "pytest-xdist>=3.6.1",
+    "selenium>=4.29.0",
+    "webdriver-manager>=4.0.2",
+]
