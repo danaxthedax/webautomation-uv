@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4c9fc160-a22a-477b-8464-49e7ebea24bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/page/start_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/page/start_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/verify_homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/verify_homepage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,9 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Python tests.Python tests in test_basic_selenium.py.executor": "Run",
     "Python tests.Python tests in test_pom.py.executor": "Run",
+    "Python tests.Python tests in verify_homepage.py.executor": "Run",
     "Python.pytest_demo1.executor": "Debug",
+    "Python.start_page.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
