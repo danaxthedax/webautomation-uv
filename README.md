@@ -4,7 +4,8 @@ based on UV and Python
 
 
 To Do list:
-
+* Testa att öppna till hemsidan direkt istället för auromation url
+* göra en funtion för hitta chat with sale
 
 chat with Sales.py
 - Enter invalid email
