@@ -5,10 +5,11 @@ based on UV and Python
 
 To Do list:
 
-* Skriv home page def för chat_with_cale
-* Göra samma test case med öppna tre chatar
 
 chat with Sales.py
+- Enter invalid email
+- enter no email
+- enter no name
 - Enter vaild name and email
 - Enter all text fields and send
 login.py
