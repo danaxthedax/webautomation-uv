@@ -1,7 +1,7 @@
 import pytest
 from tests.page.start_page import StartPage
 
-@pytest.mark.select
+@pytest.mark.homepage
 def test_select_inmotion(chrome_browser):
     #Select inmotion hosting to get to home page
     url = "http://automationpractice.com/"

@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4c9fc160-a22a-477b-8464-49e7ebea24bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/chat_with_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chat_with_sales.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/page/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/page/home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chat_with_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chat_sale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/verify_homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/verify_homepage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +52,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python tests.Python tests in chat_sale.py.executor": "Run",
     "Python tests.Python tests in test_basic_selenium.py.executor": "Run",
     "Python tests.Python tests in test_pom.py.executor": "Run",
     "Python tests.Python tests in verify_homepage.py.executor": "Run",
+    "Python.chat_sale.executor": "Run",
     "Python.chat_with_sales.executor": "Run",
     "Python.pytest_demo1.executor": "Debug",
     "Python.start_page.executor": "Run",
@@ -84,5 +88,16 @@
       <updated>1741975813843</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
