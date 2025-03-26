@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4c9fc160-a22a-477b-8464-49e7ebea24bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chat_with_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chat_with_sales.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/page/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/page/home_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,7 @@
     "Python tests.Python tests in test_basic_selenium.py.executor": "Run",
     "Python tests.Python tests in test_pom.py.executor": "Run",
     "Python tests.Python tests in verify_homepage.py.executor": "Run",
+    "Python.chat_with_sales.executor": "Run",
     "Python.pytest_demo1.executor": "Debug",
     "Python.start_page.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
