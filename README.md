@@ -6,6 +6,7 @@ based on UV and Python
 To Do list:
 * Testa att öppna till hemsidan direkt istället för auromation url
 * göra en funtion för hitta chat with sale
+* regession.txt för göra regession testset
 
 chat with Sales.py
 - Enter invalid email
