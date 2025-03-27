@@ -24,5 +24,4 @@ sumit an order.py
 - Sumit order when login in
 
 
-* pytest med att köra alla tester eller vissa filer
-* HMTL reporting när alla testcases är klara
+
