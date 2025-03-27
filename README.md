@@ -4,9 +4,10 @@ based on UV and Python
 
 
 To Do list:
-* Testa att öppna till hemsidan direkt istället för auromation url
+* Testa att öppna till hemsidan direkt istället för automation url
 * göra en funtion för hitta chat with sale
 * regession.txt för göra regession testset
+* efter klar med enter invaild email, jobba med HTML reporting
 
 chat with Sales.py
 - Enter invalid email
