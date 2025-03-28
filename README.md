@@ -23,5 +23,7 @@ sumit an order.py
 - Sumit order without login in
 - Sumit order when login in
 
+create user
+* kolla upp emaillib för skapa emails
 
 
