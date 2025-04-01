@@ -1,7 +1,11 @@
+from operator import contains
+
 import pytest
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
+
 from tests.page.start_page import StartPage
 
 @pytest.mark.chat_sale
@@ -65,9 +69,8 @@ def test_invalid_email(chrome_browser):
         .perform()
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
-    email_error = chrome_browser.find_elements("xpath",
-                                                  "//div[contains(@class, 'char-input-wrapper') and"
-                                                  "contains(@class, 'char-login-error')]")
-    print("This is the result: " + email_error)
+    chrome_browser.implicitly_wait(4)
+    email_error = chrome_browser.find_element(By.XPATH, "//div[contains(text(), ' This doesn't look like an email address. ')]")
+    print(email_error)
 
-    assert "This doesn't look like an email address." in email_error
+    assert email_error == WebElement
