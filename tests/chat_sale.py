@@ -11,7 +11,7 @@ def test_three_sales_chats(chrome_browser):
     start_page = StartPage(chrome_browser)
     start_page.open_page(url)
     start_page.select_image(chrome_browser)
-    chrome_browser.implicitly_wait(2)
+
 
     original_window = chrome_browser.current_window_handle
     total_chat_with_sales = 0
@@ -24,7 +24,7 @@ def test_three_sales_chats(chrome_browser):
     for cla in chat_with_sale:
         ActionChains(chrome_browser) \
             .scroll_to_element(cla) \
-            .scroll_by_amount(0, 200) \
+            .scroll_by_amount(0, 500) \
             .perform()
         cla.click()
         chrome_browser.switch_to.window(chrome_browser.window_handles[1])
@@ -42,7 +42,7 @@ def test_invalid_email(chrome_browser):
     start_page = StartPage(chrome_browser)
     start_page.open_page(url)
     start_page.select_image(chrome_browser)
-    chrome_browser.implicitly_wait(2)
+
 
     chat_with_sale = chrome_browser.find_elements("xpath",
                                                   "//*[contains(@class, 'ppb-button') and"
@@ -50,18 +50,24 @@ def test_invalid_email(chrome_browser):
                                                   "contains(@class, 'chat-btn-popup')]")
     ActionChains(chrome_browser) \
         .scroll_to_element(chat_with_sale[0]) \
-        .scroll_by_amount(0, 200) \
+        .scroll_by_amount(0, 500) \
         .perform()
     chat_with_sale[0].click()
     chrome_browser.implicitly_wait(2)
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
     chrome_browser.implicitly_wait(2)
-    email_input = chrome_browser.find_element(By.NAME, "email-adress")
+    email_input = chrome_browser.find_element(By.ID, "customer-email")
     chrome_browser.implicitly_wait(2)
     email_input.click()
     ActionChains(chrome_browser)\
         .key_down(Keys.SHIFT)\
         .send_keys("notvaild")\
         .perform()
-    email_error = chrome_browser.find_elements("xpath", "//[contains (@text, 'This doesn't look like an email address.'")
-    assert email_error == "This doesn't look like an email address."
+    start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
+    start_chat.click()
+    email_error = chrome_browser.find_elements("xpath",
+                                                  "//*[contains(@class, 'char-input-wrapper') and"
+                                                  "contains(@class, 'char-login-error')]")
+    print("This is the result: " + email_error)
+
+    assert "This doesn't look like an email address." in email_error
