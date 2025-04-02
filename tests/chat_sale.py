@@ -70,7 +70,7 @@ def test_invalid_email(chrome_browser):
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
     chrome_browser.implicitly_wait(4)
-    email_error = chrome_browser.find_element(By.XPATH, "//div[contains(text(), ' This doesn't look like an email address. ')]")
+    email_error = chrome_browser.find_element(By.XPATH, "//div[contains(text(), 'This doesn\'t look like an email address.')]")
     print(email_error)
 
     assert email_error == WebElement
