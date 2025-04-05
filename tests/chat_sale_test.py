@@ -82,10 +82,11 @@ def test_name_required_error(chrome_browser):
 
     home_page = HomePage(chrome_browser)
     home_page.select_chat_with_sales(chrome_browser)
-
     chrome_browser.implicitly_wait(2)
+
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
     chrome_browser.implicitly_wait(2)
+
     email_input = chrome_browser.find_element(By.ID, "customer-email")
     chrome_browser.implicitly_wait(2)
     email_input.click()
@@ -100,4 +101,34 @@ def test_name_required_error(chrome_browser):
 
     assert name_error.text == "Name is required."
 
+def test_vaild_name_email(chrome_browser):
+    url = "http://automationpractice.com/"
+    start_page = StartPage(chrome_browser)
+    start_page.open_page(url)
+    start_page.select_image(chrome_browser)
 
+    home_page = HomePage(chrome_browser)
+    home_page.select_chat_with_sales(chrome_browser)
+
+    chrome_browser.switch_to.window(chrome_browser.window_handles[1])
+    chrome_browser.implicitly_wait(2)
+
+
+    your_name = chrome_browser.find_element(By.ID, "customer-name")
+    email_input = chrome_browser.find_element(By.ID, "customer-email")
+    chrome_browser.implicitly_wait(2)
+
+
+    your_name.click()
+    ActionChains(chrome_browser) \
+        .key_down(Keys.SHIFT) \
+        .send_keys("Test Testsson") \
+        .perform()
+
+    email_input.click()
+    ActionChains(chrome_browser) \
+        .key_down(Keys.SHIFT) \
+        .send_keys("test@gmail.com") \
+        .perform()
+    #Need to find better assert
+    assert chrome_browser.title == "InMotion Hosting Live Chat"

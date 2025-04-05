@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4c9fc160-a22a-477b-8464-49e7ebea24bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/chat_sale.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chat_sale_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chat_sale_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/chat_sale_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/verify_homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/homepage_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/page/chat_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/page/chat_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +49,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests in chat_sale.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_basic_selenium.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_pom.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in verify_homepage.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat_sale.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat_with_sales.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pytest_demo1.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.start_page.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python tests.Python tests in chat_sale.py.executor": "Run",
+    "Python tests.Python tests in homepage_test.py.executor": "Run",
+    "Python tests.Python tests in test_basic_selenium.py.executor": "Run",
+    "Python tests.Python tests in test_pom.py.executor": "Run",
+    "Python tests.Python tests in verify_homepage.py.executor": "Run",
+    "Python.chat_sale.executor": "Run",
+    "Python.chat_with_sales.executor": "Run",
+    "Python.pytest_demo1.executor": "Debug",
+    "Python.start_page.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jaffa\PycharmProjects\webautomation-uv\tests\page" />
