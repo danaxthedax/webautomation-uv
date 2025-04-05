@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
 from tests.page.start_page import StartPage
+from tests.page.chat_page import ChatPage
 
 @pytest.mark.chat_sale
 def test_three_sales_chats(chrome_browser):
@@ -60,8 +61,14 @@ def test_invalid_email(chrome_browser):
     chrome_browser.implicitly_wait(2)
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
     chrome_browser.implicitly_wait(2)
+    your_name = chrome_browser.find_element(By.ID, "customer-name")
     email_input = chrome_browser.find_element(By.ID, "customer-email")
     chrome_browser.implicitly_wait(2)
+    your_name.click()
+    ActionChains(chrome_browser) \
+        .key_down(Keys.SHIFT) \
+        .send_keys("Test Testsson") \
+        .perform()
     email_input.click()
     ActionChains(chrome_browser)\
         .key_down(Keys.SHIFT)\
@@ -70,7 +77,9 @@ def test_invalid_email(chrome_browser):
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
     chrome_browser.implicitly_wait(4)
-    email_error = chrome_browser.find_element(By.XPATH, "//div[contains(text(), 'This doesn\'t look like an email address.')]")
-    print(email_error)
+    email_error = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'look like an email address.')]")
+    ChatPage.verify_text_element("Name is required.")
 
-    assert email_error == WebElement
+
+    assert email_error.text == "This doesn't look like an email address."
+
