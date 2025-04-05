@@ -4,10 +4,10 @@ import pytest
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webelement import WebElement
+
 
 from tests.page.start_page import StartPage
-from tests.page.chat_page import ChatPage
+from tests.page.home_page import HomePage
 
 @pytest.mark.chat_sale
 def test_three_sales_chats(chrome_browser):
@@ -42,23 +42,16 @@ def test_three_sales_chats(chrome_browser):
 
     assert total_chat_with_sales == 3
 
-def test_invalid_email(chrome_browser):
+def test_invalid_email_error(chrome_browser):
     url = "http://automationpractice.com/"
     start_page = StartPage(chrome_browser)
     start_page.open_page(url)
     start_page.select_image(chrome_browser)
 
-
-    chat_with_sale = chrome_browser.find_elements("xpath",
-                                                  "//*[contains(@class, 'ppb-button') and"
-                                                  " contains(@class, 'btn-primary-chat') and "
-                                                  "contains(@class, 'chat-btn-popup')]")
-    ActionChains(chrome_browser) \
-        .scroll_to_element(chat_with_sale[0]) \
-        .scroll_by_amount(0, 500) \
-        .perform()
-    chat_with_sale[0].click()
+    home_page = HomePage(chrome_browser)
+    home_page.select_chat_with_sales(chrome_browser)
     chrome_browser.implicitly_wait(2)
+
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
     chrome_browser.implicitly_wait(2)
     your_name = chrome_browser.find_element(By.ID, "customer-name")
@@ -78,8 +71,33 @@ def test_invalid_email(chrome_browser):
     start_chat.click()
     chrome_browser.implicitly_wait(4)
     email_error = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'look like an email address.')]")
-    ChatPage.verify_text_element("Name is required.")
-
 
     assert email_error.text == "This doesn't look like an email address."
+
+def test_name_required_error(chrome_browser):
+    url = "http://automationpractice.com/"
+    start_page = StartPage(chrome_browser)
+    start_page.open_page(url)
+    start_page.select_image(chrome_browser)
+
+    home_page = HomePage(chrome_browser)
+    home_page.select_chat_with_sales(chrome_browser)
+
+    chrome_browser.implicitly_wait(2)
+    chrome_browser.switch_to.window(chrome_browser.window_handles[1])
+    chrome_browser.implicitly_wait(2)
+    email_input = chrome_browser.find_element(By.ID, "customer-email")
+    chrome_browser.implicitly_wait(2)
+    email_input.click()
+    ActionChains(chrome_browser)\
+        .key_down(Keys.SHIFT)\
+        .send_keys("test@gmail.com")\
+        .perform()
+    start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
+    start_chat.click()
+    chrome_browser.implicitly_wait(4)
+    name_error = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Name is required.')]")
+
+    assert name_error.text == "Name is required."
+
 
