@@ -4,9 +4,8 @@ based on UV and Python
 
 
 To Do list:
-* göra en funtion för hitta chat with sale
-* regession.txt för göra regession testset
-* efter klar med enter invaild email, jobba med HTML reporting
+
+
 
 chat with Sales.py
 - Enter vaild name and email
