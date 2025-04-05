@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from tests.page.start_page import StartPage
 from tests.page.home_page import HomePage
 
-@pytest.mark.chat_sale
+@pytest.mark.chat_sale_test
 def test_three_sales_chats(chrome_browser):
     #verify all three chat option for Chat with sales are working
     url = "http://automationpractice.com/"

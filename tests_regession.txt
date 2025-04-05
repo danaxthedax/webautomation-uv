@@ -1,0 +1,3 @@
+tests/chat_sale_test.py
+tests/homepage_test.py
+-m slow
