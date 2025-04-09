@@ -120,7 +120,7 @@ def test_vaild_name_email(chrome_browser):
     chrome_browser.implicitly_wait(2)
 
     your_name.click()
-    #Issue with enter the email adress
+    #Issue with enter the email adress. use .sendkey on the element instead
     ActionChains(chrome_browser) \
         .key_down(Keys.SHIFT) \
         .send_keys("Test Testsson") \
