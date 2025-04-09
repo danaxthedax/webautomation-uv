@@ -116,19 +116,21 @@ def test_vaild_name_email(chrome_browser):
 
     your_name = chrome_browser.find_element(By.ID, "customer-name")
     email_input = chrome_browser.find_element(By.ID, "customer-email")
+    chat_submit = chrome_browser.find_element(By.ID, "sales-chat_submit")
     chrome_browser.implicitly_wait(2)
 
-
     your_name.click()
+    #Issue with enter the email adress
     ActionChains(chrome_browser) \
         .key_down(Keys.SHIFT) \
         .send_keys("Test Testsson") \
-        .perform()
-
-    email_input.click()
-    ActionChains(chrome_browser) \
-        .key_down(Keys.SHIFT) \
+        .move_to_element(email_input)\
+        .click(email_input)\
         .send_keys("test@gmail.com") \
         .perform()
-    #Need to find better assert
-    assert chrome_browser.title == "InMotion Hosting Live Chat"
+
+    chrome_browser.implicitly_wait(2)
+    chat_submit.click()
+    chrome_browser.implicitly_wait(2)
+    chat_with_us = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Chat with us')]")
+    assert chat_with_us == "Chat with us"
