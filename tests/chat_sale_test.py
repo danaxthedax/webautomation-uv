@@ -119,6 +119,7 @@ def test_valid_name_email(chrome_browser):
     email_input.click()
     email_input.send_keys("test@gmail.com")
 
+
     chrome_browser.implicitly_wait(2)
     chat_submit = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Start Chat')]")
     chat_submit.click()
