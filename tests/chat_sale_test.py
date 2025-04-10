@@ -1,3 +1,4 @@
+from asyncio import wait_for
 from operator import contains
 
 import pytest
@@ -54,22 +55,19 @@ def test_invalid_email_error(chrome_browser):
 
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
     chrome_browser.implicitly_wait(2)
+
     your_name = chrome_browser.find_element(By.ID, "customer-name")
-    email_input = chrome_browser.find_element(By.ID, "customer-email")
-    chrome_browser.implicitly_wait(2)
     your_name.click()
-    ActionChains(chrome_browser) \
-        .key_down(Keys.SHIFT) \
-        .send_keys("Test Testsson") \
-        .perform()
+    your_name.send_keys("Test Testsson")
+
+    email_input = chrome_browser.find_element(By.ID, "customer-email")
     email_input.click()
-    ActionChains(chrome_browser)\
-        .key_down(Keys.SHIFT)\
-        .send_keys("notvaild")\
-        .perform()
+    email_input.send_keys("not vaild")
+    chrome_browser.implicitly_wait(8)
+
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
-    chrome_browser.implicitly_wait(4)
+
     email_error = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'look like an email address.')]")
 
     assert email_error.text == "This doesn't look like an email address."
@@ -90,10 +88,9 @@ def test_name_required_error(chrome_browser):
     email_input = chrome_browser.find_element(By.ID, "customer-email")
     chrome_browser.implicitly_wait(2)
     email_input.click()
-    ActionChains(chrome_browser)\
-        .key_down(Keys.SHIFT)\
-        .send_keys("test@gmail.com")\
-        .perform()
+    email_input = chrome_browser.find_element(By.ID, "customer-email")
+    email_input.click()
+    email_input.send_keys("test@gmail.com")
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
     chrome_browser.implicitly_wait(4)
@@ -101,7 +98,7 @@ def test_name_required_error(chrome_browser):
 
     assert name_error.text == "Name is required."
 
-def test_vaild_name_email(chrome_browser):
+def test_valid_name_email(chrome_browser):
     url = "http://automationpractice.com/"
     start_page = StartPage(chrome_browser)
     start_page.open_page(url)
@@ -111,26 +108,21 @@ def test_vaild_name_email(chrome_browser):
     home_page.select_chat_with_sales(chrome_browser)
 
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
 
 
     your_name = chrome_browser.find_element(By.ID, "customer-name")
-    email_input = chrome_browser.find_element(By.ID, "customer-email")
-    chat_submit = chrome_browser.find_element(By.ID, "sales-chat_submit")
-    chrome_browser.implicitly_wait(2)
-
     your_name.click()
-    #Issue with enter the email adress
-    ActionChains(chrome_browser) \
-        .key_down(Keys.SHIFT) \
-        .send_keys("Test Testsson") \
-        .move_to_element(email_input)\
-        .click(email_input)\
-        .send_keys("test@gmail.com") \
-        .perform()
+    your_name.send_keys("Test Testsson")
+
+    email_input = chrome_browser.find_element(By.ID, "customer-email")
+    email_input.click()
+    email_input.send_keys("test@gmail.com")
 
     chrome_browser.implicitly_wait(2)
+    chat_submit = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Start Chat')]")
     chat_submit.click()
-    chrome_browser.implicitly_wait(2)
-    chat_with_us = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Chat with us')]")
+
+    chrome_browser.implicitly_wait(10)
+    chat_with_us = chrome_browser.find_element(By.ID, "webWidget")
     assert chat_with_us == "Chat with us"
