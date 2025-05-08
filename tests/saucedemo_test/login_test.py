@@ -11,9 +11,6 @@ def test_login_standard(chrome_browser):
 
     login_page.login_standard(chrome_browser)
 
-    login = chrome_browser.find_element(By.ID, "login-button")
-    login.click()
-
     menu = chrome_browser.find_element(By.ID, "react-burger-menu-btn")
 
     assert menu != ""

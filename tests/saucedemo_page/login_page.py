@@ -14,3 +14,6 @@ class LoginPage:
 
         password = self.driver.find_element(By.ID, "password")
         password.send_keys("secret_sauce")
+
+        login = self.driver.find_element(By.ID, "login-button")
+        login.click()
