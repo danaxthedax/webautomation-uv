@@ -1,14 +1,10 @@
-from asyncio import wait_for
-from operator import contains
-
 import pytest
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 
-from tests.page.start_page import StartPage
-from tests.page.home_page import HomePage
+from tests.inmontions_page.start_page import StartPage
+from tests.inmontions_page.home_page import HomePage
 
 @pytest.mark.chat_sale_test
 def test_three_sales_chats(chrome_browser):
@@ -51,10 +47,10 @@ def test_invalid_email_error(chrome_browser):
 
     home_page = HomePage(chrome_browser)
     home_page.select_chat_with_sales(chrome_browser)
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
 
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
 
     your_name = chrome_browser.find_element(By.ID, "customer-name")
     your_name.click()
@@ -63,7 +59,7 @@ def test_invalid_email_error(chrome_browser):
     email_input = chrome_browser.find_element(By.ID, "customer-email")
     email_input.click()
     email_input.send_keys("not vaild")
-    chrome_browser.implicitly_wait(8)
+    chrome_browser.implicitly_wait(10)
 
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
@@ -80,20 +76,20 @@ def test_name_required_error(chrome_browser):
 
     home_page = HomePage(chrome_browser)
     home_page.select_chat_with_sales(chrome_browser)
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
 
     chrome_browser.switch_to.window(chrome_browser.window_handles[1])
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
 
     email_input = chrome_browser.find_element(By.ID, "customer-email")
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
     email_input.click()
     email_input = chrome_browser.find_element(By.ID, "customer-email")
     email_input.click()
     email_input.send_keys("test@gmail.com")
     start_chat = chrome_browser.find_element(By.ID, "sales-chat-submit")
     start_chat.click()
-    chrome_browser.implicitly_wait(4)
+    chrome_browser.implicitly_wait(10)
     name_error = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Name is required.')]")
 
     assert name_error.text == "Name is required."
@@ -120,7 +116,7 @@ def test_valid_name_email(chrome_browser):
     email_input.send_keys("test@gmail.com")
 
 
-    chrome_browser.implicitly_wait(2)
+    chrome_browser.implicitly_wait(10)
     chat_submit = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Start Chat')]")
     chat_submit.click()
 

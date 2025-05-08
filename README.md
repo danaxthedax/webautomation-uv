@@ -1,24 +1,24 @@
-Daniel Axelsson Practice on Automation with Seleium.
+Welcome to Daniel Axelsson Practice on Automation with Seleium.
 
-based on UV and Python
+This project are using Python and UV for the package manager
+
+The project are testing two differnt websites
+From the terminal, you can run pytest commands
+To test both: pytest tests/
+To test InMontions: pytest tests/inmontions_test/
+To test saucedemo: pytest tests/saucedemo_test/
 
 
 To Do list:
 
-
-
 chat with Sales.py
 - Enter vaild name and email
 - Enter all text fields and send
-login.py
-- Login with invalid username
-- Login with vaild username and invaild password
-- Login with valid user with vaild password
-sumit an order.py
+
+sumit an order.py for saucedemo
 - Sumit order without login in
 - Sumit order when login in
 
-create user
-* kolla upp emaillib för skapa emails
+
 
 

@@ -1,4 +1,4 @@
-#Start page of http://automationpractice.com/
+#Start inmontions_page of http://automationpractice.com/
 from pytest_selenium import driver
 
 

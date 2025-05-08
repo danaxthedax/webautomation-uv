@@ -16,4 +16,4 @@ def pytest_html_report_title(report):
 
 def pytest_configure(config):
         config.stash[metadata_key]["Project"] = "Webautomation-UV"
-        config.stash[metadata_key]["Base URL"] = "https://www.inmotionhosting.com/"
+

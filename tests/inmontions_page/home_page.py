@@ -1,4 +1,4 @@
-#Home page selection
+#Home inmontions_page selection
 from pytest_selenium import driver
 from selenium.webdriver.common.action_chains import ActionChains
 
