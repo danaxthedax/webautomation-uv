@@ -1,7 +1,7 @@
 import pytest
 from tests.saucedemo_page.login_page import LoginPage
 from selenium.webdriver.common.by import By
-#swaplogin to test login
+
 
 @pytest.mark.login_test
 def test_login_standard(chrome_browser):

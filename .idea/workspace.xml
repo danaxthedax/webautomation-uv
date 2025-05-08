@@ -8,12 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/chat_sale_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/inmontions_test/chat_sale_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/homepage_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/inmontions_test/homepage_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/page/chat_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/inmontions_page/chat_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/page/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/inmontions_page/home_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/page/start_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/inmontions_page/start_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/saucedemo_test/login_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/saucedemo_test/login_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +60,7 @@
     "Python tests.pytest in chat_sale_test.py.executor": "Run",
     "Python tests.pytest in homepage_test.py.executor": "Run",
     "Python tests.pytest in login_test.py.executor": "Run",
+    "Python tests.pytest in order_test.py.executor": "Run",
     "Python.chat_sale.executor": "Run",
     "Python.chat_sale_test.executor": "Run",
     "Python.chat_with_sales.executor": "Run",

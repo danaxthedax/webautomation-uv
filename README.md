@@ -11,13 +11,12 @@ To test saucedemo: pytest tests/saucedemo_test/
 
 To Do list:
 
-chat with Sales.py
-- Enter vaild name and email
-- Enter all text fields and send
+Logout for login_test.py
 
 sumit an order.py for saucedemo
-- Sumit order without login in
-- Sumit order when login in
+
+image_testing.py verify all images are loaded
+Make one test case with viusal_user
 
 
 
