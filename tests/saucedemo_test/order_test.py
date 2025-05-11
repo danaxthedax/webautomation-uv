@@ -41,7 +41,24 @@ def test_order_remove(chrome_browser):
     assert backpack_add_displayed.text == "Add to cart"
     #Assert that badge are not displayed
 
+def test_correct_order_in_cart(chrome_browser):
+    url = "https://www.saucedemo.com/"
+    login_page = LoginPage(chrome_browser)
+    login_page.open_page(url)
+    login_page.login_standard(chrome_browser)
 
+    backpack_add = chrome_browser.find_element(By.CSS_SELECTOR, '[data-test="add-to-cart-sauce-labs-backpack"]')
+    backpack_add.click()
+
+    cart_link = chrome_browser.find_element(By.CSS_SELECTOR, '[data-test="shopping-cart-link"]')
+    chrome_browser.implicitly_wait(5)
+    cart_link.click()
+
+    bag_name = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'Sauce Labs Backpack')]")
+    bag_desc = chrome_browser.find_element(By.XPATH, "//*[contains(text(), 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.')]")
+
+    assert bag_desc.text == "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
+    assert bag_name.text == "Sauce Labs Backpack"
 
 
 
