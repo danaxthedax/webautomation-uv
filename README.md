@@ -13,6 +13,8 @@ To Do list:
 
 Logout for login_test.py
 
+redo check cart, less hardcoded
+
 sumit an order.py for saucedemo
 
 image_testing.py verify all images are loaded
