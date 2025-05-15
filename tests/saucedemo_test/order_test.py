@@ -72,6 +72,8 @@ def test_correct_order_in_cart_flex(chrome_browser):
     first_inventory_item = first_inventory_list.find_element(By.CSS_SELECTOR, '[data-test="inventory-item"]')
     first_inventory_item_desc = first_inventory_item.find_element(By.CSS_SELECTOR,'[data-test="inventory-item-desc"]' )
 
+    print(first_inventory_item_desc.text)
+
     add_to_cart_button = first_inventory_item.find_element(By.TAG_NAME, 'button')
     add_to_cart_button.click()
 
@@ -84,5 +86,5 @@ def test_correct_order_in_cart_flex(chrome_browser):
     item_in_cart_text = first_item_in_cart.find_element(By.CSS_SELECTOR, '[data-test="inventory-item-desc"]')
 
 
-    assert first_inventory_item_desc == item_in_cart_text.text
+    assert first_inventory_item_desc.text == item_in_cart_text.text
 
