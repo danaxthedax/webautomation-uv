@@ -13,12 +13,15 @@ To Do list:
 
 Logout for login_test.py
 
-redo check cart, less hardcoded
-
 sumit an order.py for saucedemo
+* one order
+* two order
+* order that will fail
 
 image_testing.py verify all images are loaded
 Make one test case with viusal_user
+
+
 
 
 
