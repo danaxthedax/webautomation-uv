@@ -1,4 +1,4 @@
-Welcome to Daniel Axelsson Practice on Automation with Seleium.
+Welcome to Daniel Axelsson UI Automation project with Seleium.
 
 This project are using Python and UV for the package manager. You will run the tests with pytest
 
